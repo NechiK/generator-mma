@@ -19,11 +19,11 @@ var ModularMaintainableAngular = yeoman.Base.extend({
     },
     welcome: function () {
         this.log(yosay(
-            'Welcome to the Modular Maintainable AngularJS generator!'
+            'Welcome to the Pretty AngularJS generator!'
         ));
     },
     displayName: function() {
-        this.log('Creating ' + this.appName + ' app based on Modular Maintainable AngularJS.');
+        this.log('Creating ' + this.appName + ' app based on Pretty AngularJS.');
     },
     packageFiles: function() {
         var context = {

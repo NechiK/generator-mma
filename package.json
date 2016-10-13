@@ -1,6 +1,6 @@
 {
-  "name": "generator-modular-maintainable-angular",
-  "version": "1.0.0-alpha1",
+  "name": "generator-pretty-angular",
+  "version": "0.1.0",
   "description": "A generator for creating a basic AngularJS app skeleton project",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "angularjs",
     "generator"
   ],
-  "author": "Maks Nechesonov",
+  "author": "Agilie Ninjas",
   "license": "ISC",
   "dependencies": {
     "gulp-load-plugins": "^1.2.4",
