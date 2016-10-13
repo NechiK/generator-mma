@@ -5,6 +5,7 @@ var del = require('del');
 var glob = require('glob');
 var gulp = require('gulp');
 var path = require('path');
+var sass = require('gulp-sass');
 var _ = require('lodash');
 var $ = require('gulp-load-plugins')({ lazy: true });
 
@@ -59,7 +60,7 @@ gulp.task('plato', function(done) {
  * Compile less to css
  * @return {Stream}
  */
-gulp.task('styles', ['clean-styles'], function() {
+gulp.task('less', ['clean-styles'], function() {
   log('Compiling Less --> CSS');
 
   return gulp
@@ -69,6 +70,15 @@ gulp.task('styles', ['clean-styles'], function() {
     //        .on('error', errorLogger) // more verbose and dupe output. requires emit.
     .pipe($.autoprefixer({ browsers: ['last 2 version', '> 5%'] }))
     .pipe(gulp.dest(config.temp));
+});
+
+gulp.task('styles', ['clean-styles'], function() {
+  log('Compiling SASS --> CSS');
+
+  return gulp
+      .src(config.sass)
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest(config.temp));
 });
 
 /**
