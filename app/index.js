@@ -43,6 +43,7 @@ var ModularMaintainableAngular = yeoman.Base.extend({
         this.directory('src/client/test-helpers');
 
         this.template('src/client/_index.html', 'src/client/index.html');
+        this.template('src/requestservices/restful_requestservice.js', 'src/client/app/core/request_service.js');
 
         this.template('src/server/_app.js', 'src/server/app.js');
         this.template('src/server/_data.js', 'src/server/data.js');

@@ -1,7 +1,7 @@
 {
-  "name": "generator-pretty-angular",
+  "name": "generator-mma",
   "version": "0.1.0",
-  "description": "A generator for creating a basic AngularJS app skeleton project",
+  "description": "A generator for creating a modular and maintainable AngularJS project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,8 +12,8 @@
     "angularjs",
     "generator"
   ],
-  "author": "Agilie Ninjas",
-  "license": "ISC",
+  "author": "Maks Nechesonov",
+  "license": "MIT",
   "dependencies": {
     "gulp-load-plugins": "^1.2.4",
     "gulp-sass": "^2.3.2",

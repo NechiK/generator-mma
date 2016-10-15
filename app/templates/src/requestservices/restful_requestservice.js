@@ -108,7 +108,8 @@
             }
         }
 
-        function parseUrlParams(urlParams, endpointUrl) {
+        function parseUrlParams(data, endpointUrl) {
+            var urlParams = data['url_params'];
             var keysArr = Object.keys(urlParams);
 
             keysArr.forEach(function(oneKey) {
