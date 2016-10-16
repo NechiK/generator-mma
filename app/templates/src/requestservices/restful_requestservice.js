@@ -42,7 +42,7 @@
                 formData;
 
             headers['Content-Type'] = inputHeaders['Content-Type'] || 'application/json';
-            parseUrlParams(data['url_params'], url);
+            parseUrlParams(data, url);
 
             var sendData = {
                 method: endpoints[endpoint].method,
