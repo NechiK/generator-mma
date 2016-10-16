@@ -1,6 +1,6 @@
 # Prerequisites
 
-1) Install Node.js
+1) Install Node.js <br />
 2) Install Yeoman 
 ``` 
 npm install -g yo 
