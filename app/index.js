@@ -2,6 +2,7 @@
 
 var yeoman = require('yeoman-generator'),
     yosay = require('yosay'),
+    path = require('path'),
     _ = require('lodash'),
     str = require('underscore.string'),
     mkdirp = require('mkdirp');
@@ -14,16 +15,41 @@ var ModularMaintainableAngular = yeoman.Base.extend({
         // defined in the constructor.
         yeoman.Base.apply(this, arguments);
 
-        this.argument('appName', { type: String, required: true });
+        this.argument('appName', { type: String, required: false });
+        this.argument('requestsArchitect', { type: String, required: false });
         this.appName = _.camelize(_.slugify(_.humanize(this.appName)));
     },
     welcome: function () {
         this.log(yosay(
-            'Welcome to the Pretty AngularJS generator!'
+            'Welcome to the Modular Maintainable AngularJS generator!'
         ));
     },
+    prompting: function() {
+        var prompts = [];
+        // If we passed in the app name, don't prompt the user for it
+        if (!this.appName) {
+            prompts.push({
+                type: 'input',
+                name: 'appName',
+                message: 'What would you like to name the app?',
+                default: this.appName || path.basename(process.cwd())
+            });
+        }
+
+        prompts.push({
+            type: 'list',
+            name: 'requestsArchitect',
+            message: 'What type of request architecture do you want to use?',
+            choices: ['REST', 'SOAP']
+        });
+
+        return this.prompt(prompts).then(function(answers) {
+            this.appName = answers.appName;
+            this.requestsArchitect = answers.requestsArchitect;
+        }.bind(this));
+    },
     displayName: function() {
-        this.log('Creating ' + this.appName + ' app based on Pretty AngularJS.');
+        this.log('Creating ' + this.appName + ' app based on Modular Maintainable AngularJS.');
     },
     packageFiles: function() {
         var context = {
@@ -43,7 +69,13 @@ var ModularMaintainableAngular = yeoman.Base.extend({
         this.directory('src/client/test-helpers');
 
         this.template('src/client/_index.html', 'src/client/index.html');
-        this.template('src/requestservices/restful_requestservice.js', 'src/client/app/core/request_service.js');
+
+        if (this.requestsArchitect === 'REST') {
+            this.template(
+                'src/requestservices/restful_requestservice.js',
+                'src/client/app/core/request_service.js'
+            );
+        }
 
         this.template('src/server/_app.js', 'src/server/app.js');
         this.template('src/server/_data.js', 'src/server/data.js');

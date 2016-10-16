@@ -1,6 +1,6 @@
 {
   "name": "generator-mma",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A generator for creating a modular and maintainable AngularJS project",
   "main": "index.js",
   "scripts": {
