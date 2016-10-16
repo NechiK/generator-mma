@@ -1,10 +1,28 @@
 #Prerequisites
 
 1) Install Node.js
-2) Install Yeoman ``` npm install -g yo ```
-3) Install next NPM modules globally <br />
-``` npm install -g bower gulp nodemon ```
+2) Install Yeoman 
+``` 
+npm install -g yo 
+```
+3) Install next NPM modules globally
+``` 
+npm install -g bower gulp nodemon 
+```
 
 #Quick Start
 
-Run the generator ``` yo mma ```
+1) Pull repository
+2) Go to generator root folder and link one
+``` 
+npm link 
+```
+3) Create a new folder for project and change directory to it
+``` 
+mkdir myapp
+cd myapp
+```
+4) Run the generator 
+```
+yo mma 
+```
