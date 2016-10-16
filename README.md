@@ -1,4 +1,4 @@
-#Prerequisites#
+# Prerequisites
 
 1) Install Node.js
 2) Install Yeoman 
@@ -10,7 +10,7 @@ npm install -g yo
 npm install -g bower gulp nodemon 
 ```
 
-#Quick Start#
+# Quick Start
 
 1) Pull repository
 2) Go to generator root folder and link one
