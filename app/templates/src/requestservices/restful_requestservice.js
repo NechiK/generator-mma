@@ -30,7 +30,7 @@
             run: makeRequest
         };
 
-        function makeRequest(endpoint, data, inputHeaders) {
+        function makeRequest(endpoint, dataToSend, inputHeaders) {
             var requestInProgress = isRequestInProgress(endpoint);
             // Block set of identical requests
             if (!requestInProgress) {
@@ -39,10 +39,20 @@
             }
             var url = endpoints[endpoint].url,
                 headers = inputHeaders || {},
+                data = dataToSend || {},
                 formData;
 
             headers['Content-Type'] = inputHeaders['Content-Type'] || 'application/json';
-            parseUrlParams(data, url);
+
+            if (data['url_params']) {
+                var urlParams = data['url_params'],
+                    keysArr = Object.keys(urlParams);
+
+                keysArr.forEach(function(oneKey) {
+                    url = url.replace(oneKey, urlParams[oneKey]);
+                });
+                delete data['url_params'];
+            }
 
             var sendData = {
                 method: endpoints[endpoint].method,
