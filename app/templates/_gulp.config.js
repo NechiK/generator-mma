@@ -115,7 +115,7 @@ module.exports = function() {
       nodeModules + '/chai/chai.js',
       nodeModules + '/sinon-chai/lib/sinon-chai.js'
     ],
-    specHelpers: [client + 'test-helpers/*.js'],
+    specHelpers: [client + 'test-helpers/**/*.js'],
     specs: [clientApp + '**/*.spec.js'],
     serverIntegrationSpecs: [client + '/tests/server-integration/**/*.spec.js'],
 
