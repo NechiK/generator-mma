@@ -42,7 +42,7 @@
                 data = dataToSend || {},
                 formData;
 
-            headers['Content-Type'] = inputHeaders['Content-Type'] || 'application/json';
+            headers['Content-Type'] = headers['Content-Type'] || 'application/json';
 
             if (data['url_params']) {
                 var urlParams = data['url_params'],
@@ -116,16 +116,6 @@
                 endpoints[endpoint].inProgress = true;
                 return true;
             }
-        }
-
-        function parseUrlParams(data, endpointUrl) {
-            var urlParams = data['url_params'];
-            var keysArr = Object.keys(urlParams);
-
-            keysArr.forEach(function(oneKey) {
-                endpointUrl = endpointUrl.replace(oneKey, urlParams[oneKey]);
-            });
-            delete data['url_params'];
         }
 
         // ----- Error handlers -----
