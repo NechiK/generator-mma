@@ -575,11 +575,11 @@ function startPlatoVisualizer(done) {
  * @return {undefined}
  */
 function startTests(singleRun, done) {
-  var child;
-  var excludeFiles = [];
-  var fork = require('child_process').fork;
-  var Karma = require('karma').Server;
-  var serverSpecs = config.serverIntegrationSpecs;
+  var child,
+      excludeFiles = [],
+      fork = require('child_process').fork,
+      Karma = require('karma').Server,
+      serverSpecs = config.serverIntegrationSpecs;
 
   if (args.startServers) {
     log('Starting servers');
