@@ -1,0 +1,29 @@
+(function () {
+    'use strict';
+
+    angular
+        .module('<%= moduleName %>')
+        .run(appRun);
+
+    appRun.$inject = ['routerHelper'];
+    /* @ngInject */
+    function appRun(routerHelper) {
+        routerHelper.configureStates(getStates());
+    }
+
+    function getStates() {
+        return [
+            {
+                state: '',
+                config: {
+                    url: '',
+                    templateUrl: '',
+                    controller: '',
+                    controllerAs: '',
+                    title: '',
+                    settings: {}
+                }
+            }
+        ];
+    }
+})();

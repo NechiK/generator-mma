@@ -1,0 +1,29 @@
+(function () {
+    'use strict';
+
+    angular
+        .module('<%= moduleName %>')
+        .controller('<%= controllerName %>', <%= controllerName %>);
+
+    <%= controllerName %>.$inject = [
+        '$state', '$stateParams'
+    ];
+    /* @ngInject */
+    function <%= controllerName %>(
+        $state, $stateParams
+    ) {
+        var vm = this;
+
+        vm.menu = {
+
+        };
+
+        vm.model = {};
+
+        activate();
+
+        function activate() {
+
+        }
+    }
+})();
