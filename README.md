@@ -26,3 +26,9 @@ cd myapp
 ```
 yo mma 
 ```
+
+#Start the project
+
+```
+gulp serve-dev
+```
