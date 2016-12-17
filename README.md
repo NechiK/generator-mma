@@ -1,4 +1,4 @@
-# Prerequisites
+# Preconditions
 
 1) Install Node.js <br />
 2) Install Yeoman 
