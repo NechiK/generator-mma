@@ -67,6 +67,7 @@ var ModularMaintainableAngular = yeoman.Base.extend({
         this.directory('src/client/images');
         this.directory('src/client/styles');
         this.directory('src/client/test-helpers');
+        this.directory('src/templates');
 
         this.template('src/client/_index.html', 'src/client/index.html');
 

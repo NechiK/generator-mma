@@ -1,0 +1,14 @@
+(function () {
+    'use strict';
+
+    angular
+        .module('<%= moduleName %>')
+        .factory('<%= modelName %>', <%= modelName %>);
+
+    <%= modelName %>.$inject = [];
+    /* @ngInject */
+    function <%= modelName %>() {
+
+        return {};
+    }
+})();

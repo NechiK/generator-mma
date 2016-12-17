@@ -8,6 +8,8 @@ var path = require('path');
 var sass = require('gulp-sass');
 var _ = require('lodash');
 var $ = require('gulp-load-plugins')({ lazy: true });
+var template = require('gulp-template');
+var rename = require('gulp-rename');
 
 var colors = $.util.colors;
 var envenv = $.util.env;
@@ -29,6 +31,58 @@ var port = process.env.PORT || config.defaultPort;
  */
 gulp.task('help', $.taskListing);
 gulp.task('default', ['help']);
+
+function parseName(str) {
+    var string = str.replace(/_([a-z])/g, function (g) { return g[1].toUpperCase(); });
+    return string.substr(0, 1).toUpperCase() + string.substr(1);
+}
+/**
+ * Generate files for angular
+ * Example: gulp generate --controller some_controller_name
+ */
+gulp.task('generate', function () {
+    var defaultDir = 'src/client/app',
+        templatesDir = 'src/templates/',
+        controller = args.c || args.controller,
+        module = args.module,
+        model = args.model,
+        routes = args.routes,
+        dir = args.dir ? '/' + args.dir : '';
+    if (controller) {
+        return gulp.src(templatesDir + 'controller.template')
+            .pipe(rename(controller + '.controller.js'))
+            .pipe(template({
+                controllerName: parseName(controller) + 'Controller',
+                moduleName: module || 'app.core'
+            }))
+            .pipe(gulp.dest(defaultDir + '/' + controller + dir));
+    }
+    if (model) {
+        return gulp.src(templatesDir + 'model.template')
+            .pipe(rename(model + '.model.js'))
+            .pipe(template({
+                modelName: parseName(model) + 'Model',
+                moduleName: module || 'app.core'
+            }))
+            .pipe(gulp.dest(defaultDir + '/models'));
+    }
+    if (routes) {
+        return gulp.src(templatesDir + 'routes.template')
+            .pipe(rename(routes + '.routes.js'))
+            .pipe(template({
+                moduleName: 'app.core'
+            }))
+            .pipe(gulp.dest(defaultDir + '/routes'));
+    }
+    if (module) {
+        return gulp.src(templatesDir + 'module.template')
+            .pipe(rename(module + '.module.js'))
+            .pipe(template({
+                moduleName: 'app.' + module
+            }))
+            .pipe(gulp.dest(defaultDir + '/' + module));
+    }
+});
 
 /**
  * vet the code and create coverage report

@@ -5,13 +5,9 @@
         .module('<%= moduleName %>')
         .controller('<%= controllerName %>', <%= controllerName %>);
 
-    <%= controllerName %>.$inject = [
-        '$state', '$stateParams'
-    ];
+    <%= controllerName %>.$inject = [];
     /* @ngInject */
-    function <%= controllerName %>(
-        $state, $stateParams
-    ) {
+    function <%= controllerName %>() {
         var vm = this;
 
         vm.menu = {
