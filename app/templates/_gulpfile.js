@@ -38,14 +38,14 @@ function parseName(str) {
 }
 /**
  * Generate files for angular
- * Example: gulp generate --controller some_controller_name
+ * Example: gulp generate --controller some_controller_name --module some_module_name
  */
 gulp.task('generate', function () {
     var defaultDir = 'src/client/app',
         templatesDir = 'src/templates/',
         controller = args.c || args.controller,
         module = args.module,
-        model = args.model,
+        directive = args.directive,
         routes = args.routes,
         dir = args.dir ? '/' + args.dir : '';
     if (controller) {
@@ -73,6 +73,15 @@ gulp.task('generate', function () {
                 moduleName: 'app.core'
             }))
             .pipe(gulp.dest(defaultDir + '/routes'));
+    }
+    if (directive) {
+        return gulp.src(templatesDir + 'directive.template')
+            .pipe(rename(routes + '.directive.js'))
+            .pipe(template({
+                directiveName: directive,
+                moduleName: module || 'app.core'
+            }))
+            .pipe(gulp.dest(defaultDir + '/core/directives/' + directive));
     }
     if (module) {
         return gulp.src(templatesDir + 'module.template')

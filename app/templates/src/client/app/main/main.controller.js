@@ -5,14 +5,9 @@
         .module('app.main')
         .controller('MainController', MainController);
 
-    MainController.$inject = [
-        '$state', 'logger', '$stateParams',
-        '$q'
-    ];
+    MainController.$inject = [];
     /* @ngInject */
-    function MainController(
-        $state, logger, $stateParams, $q
-    ) {
+    function MainController() {
         var vm = this;
 
         vm.menu = {
