@@ -45,6 +45,7 @@ gulp.task('generate', function () {
         templatesDir = 'src/templates/',
         controller = args.c || args.controller,
         module = args.module,
+        model = args.model,
         directive = args.directive,
         routes = args.routes,
         dir = args.dir ? '/' + args.dir : '';

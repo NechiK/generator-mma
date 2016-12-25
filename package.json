@@ -1,6 +1,6 @@
 {
   "name": "generator-mma",
-  "version": "0.2.0",
+  "version": "1.0.0-beta0",
   "description": "A generator for creating a modular and maintainable AngularJS project",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,9 @@
     "yeoman-generator",
     "angular",
     "angularjs",
-    "generator"
+    "generator",
+    "modular",
+    "maintainable"
   ],
   "author": "Maks Nechesonov",
   "license": "MIT",

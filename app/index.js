@@ -40,7 +40,7 @@ var ModularMaintainableAngular = yeoman.Base.extend({
             type: 'list',
             name: 'requestsArchitect',
             message: 'What type of request architecture do you want to use?',
-            choices: ['REST', 'SOAP']
+            choices: ['REST', 'SOAP', 'Skip']
         });
 
         return this.prompt(prompts).then(function(answers) {
@@ -73,8 +73,12 @@ var ModularMaintainableAngular = yeoman.Base.extend({
 
         if (this.requestsArchitect === 'REST') {
             this.template(
-                'src/requestservices/restful_requestservice.js',
-                'src/client/app/core/request_service.js'
+                'src/requestservices/api_service.js',
+                'src/client/app/core/api_service.js'
+            );
+            this.template(
+                'src/requestservices/resource_service.js',
+                'src/client/app/core/resource_service.js'
             );
         }
 
@@ -97,7 +101,7 @@ var ModularMaintainableAngular = yeoman.Base.extend({
         //            console.log('\nEverything Setup!\n');
         //            done();
         //        });
-        //this.npmInstall();
+        // this.npmInstall();
         //              this.bowerInstall();
         console.log('\nEverything Setup !!!\n');
     },
