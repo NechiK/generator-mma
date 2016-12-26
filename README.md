@@ -9,7 +9,6 @@ npm install -g yo
 ``` 
 npm install -g bower gulp nodemon 
 ```
-
 # Quick Start
 
 1) Pull repository
@@ -26,9 +25,19 @@ cd myapp
 ```
 yo mma 
 ```
-
-#Start the project
-
+5) Install dependencies (if they were not installed recently)
+```
+npm install
+```
+6) Start the project and begin coding
 ```
 gulp serve-dev
 ```
+
+# Gulp tasks
+
+1) ``` gulp generate ```
+
+For making new angular files (controller, models, routes etc.) creation easier you can use appropriate gulp task.
+
+*

@@ -77,7 +77,7 @@ gulp.task('generate', function () {
     }
     if (directive) {
         return gulp.src(templatesDir + 'directive.template')
-            .pipe(rename(routes + '.directive.js'))
+            .pipe(rename(directive + '.directive.js'))
             .pipe(template({
                 directiveName: directive,
                 moduleName: module || 'app.core'
