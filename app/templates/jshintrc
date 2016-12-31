@@ -7,7 +7,7 @@
     "forin": true,
     "freeze": true,
     "immed": true,
-    "indent": 2,
+    "indent": 4,
     "latedef": "nofunc",
     "newcap": true,
     "noarg": true,
@@ -22,7 +22,7 @@
     "maxparams": 10,
     "maxdepth": 5,
     "maxstatements": 40,
-    "maxcomplexity": 8,
+    "maxcomplexity": 12,
     "maxlen": 120,
 
     "asi": false,

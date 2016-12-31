@@ -3,11 +3,11 @@
 
     angular
         .module('<%= moduleName %>')
-        .directive('<%= directiveName %>', <%= directiveName %>);
+        .directive('<%= name %>', <%= name %>);
 
-    <%= directiveName %>.$inject = [];
+    <%= name %>.$inject = [];
     /* @ngInject */
-    function <%= directiveName %>() {
+    function <%= name %>() {
         var directive = {
             restrict: '',
             replace: true

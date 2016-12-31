@@ -1,20 +1,19 @@
 (function() {
-  'use strict';
+    'use strict';
 
-  angular
-    .module('app.layout')
-    .controller('ShellController', ShellController);
+    angular
+        .module('app.layout')
+        .controller('ShellController', ShellController);
 
-  ShellController.$inject = ['config', 'logger'];
-  /* @ngInject */
-  function ShellController(config, logger) {
-    var vm = this;
+    ShellController.$inject = ['config', 'logger'];
+    /* @ngInject */
+    function ShellController(config, logger) {
+        var vm = this;
 
+        activate();
 
-    activate();
-
-    function activate() {
-      logger.success(config.appTitle + ' loaded!', null);
+        function activate() {
+            logger.success(config.appTitle + ' loaded!', null);
+        }
     }
-  }
 })();

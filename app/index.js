@@ -17,6 +17,8 @@ var ModularMaintainableAngular = yeoman.Base.extend({
 
         this.argument('appName', { type: String, required: false });
         this.argument('requestsArchitect', { type: String, required: false });
+        this.argument('moduleName', { type: String, required: false, default: '<%= moduleName %>'});
+        this.argument('name', { type: String, required: false, default: '<%= name %>'});
         this.appName = _.camelize(_.slugify(_.humanize(this.appName)));
     },
     welcome: function () {
@@ -67,7 +69,7 @@ var ModularMaintainableAngular = yeoman.Base.extend({
         this.directory('src/client/images');
         this.directory('src/client/styles');
         this.directory('src/client/test-helpers');
-        this.directory('src/templates');
+        this.directory('src/ng_templates');
 
         this.template('src/client/_index.html', 'src/client/index.html');
 

@@ -3,11 +3,11 @@
 
     angular
         .module('<%= moduleName %>')
-        .controller('<%= controllerName %>', <%= controllerName %>);
+        .controller('<%= name %>', <%= name %>);
 
-    <%= controllerName %>.$inject = [];
+    <%= name %>.$inject = [];
     /* @ngInject */
-    function <%= controllerName %>() {
+    function <%= name %>() {
         var vm = this;
 
         vm.menu = {

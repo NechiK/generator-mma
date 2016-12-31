@@ -3,11 +3,11 @@
 
     angular
         .module('<%= moduleName %>')
-        .factory('<%= modelName %>', <%= modelName %>);
+        .factory('<%= name %>', <%= name %>);
 
-    <%= modelName %>.$inject = [];
+    <%= name %>.$inject = [];
     /* @ngInject */
-    function <%= modelName %>() {
+    function <%= name %>() {
 
         return {};
     }
