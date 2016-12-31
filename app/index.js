@@ -76,10 +76,6 @@ var ModularMaintainableAngular = yeoman.Base.extend({
                 'src/requestservices/api_service.js',
                 'src/client/app/core/api_service.js'
             );
-            this.template(
-                'src/requestservices/resource_service.js',
-                'src/client/app/core/resource_service.js'
-            );
         }
 
         this.template('src/server/_app.js', 'src/server/app.js');
