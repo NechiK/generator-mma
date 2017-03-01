@@ -9,6 +9,7 @@ The key differences:
 
 1. Install Node.js
 2. Install next NPM modules globally
+
     ```
     npm install -g bower gulp nodemon 
     ```
