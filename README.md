@@ -7,11 +7,12 @@ The key differences:
 
 # Preconditions
 
-1. Install Node.js <br />
+1. Install Node.js
 2. Install next NPM modules globally
-```
-npm install -g bower gulp nodemon 
-```
+    ```
+    npm install -g bower gulp nodemon 
+    ```
+    
 # Quick Start
 
 1. Install generator-mma
