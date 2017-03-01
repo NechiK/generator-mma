@@ -14,7 +14,16 @@
     "modular",
     "maintainable"
   ],
-  "author": "Maks Nechesonov",
+  "author": {
+    "name": "Maks Nechesonov",
+    "email": "maksnechesonov@gmail.com",
+    "url": "https://github.com/NechiK"
+  },
+  "contributors": [{
+    "name": "John Papa",
+    "email": "",
+    "url": "https://github.com/johnpapa"
+  }],
   "license": "MIT",
   "dependencies": {
     "gulp-load-plugins": "^1.2.4",

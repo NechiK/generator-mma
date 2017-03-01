@@ -1,22 +1,24 @@
+Generator of AngularJS (1.x) project based on Hottowel generator.
+
+The key differences:
+- added gulp task for angular files generation
+- added API service
+- replaced LESS on SASS
+
 # Preconditions
 
 1) Install Node.js <br />
-2) Install Yeoman 
-``` 
-npm install -g yo 
+2) Install next NPM modules globally
 ```
-3) Install next NPM modules globally
-``` 
 npm install -g bower gulp nodemon 
 ```
 # Quick Start
 
-1) Pull repository
-2) Go to generator root folder and link one
-``` 
-npm link 
+1) Install generator-mma
 ```
-3) Create a new folder for project and change directory to it
+npm install -g generator-mma
+```
+2) Create a new folder for project and change directory to it
 ``` 
 mkdir myapp
 cd myapp
