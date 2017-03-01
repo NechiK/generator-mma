@@ -46,6 +46,6 @@ The key differences:
 
 1. ``` gulp generate ```
 
-For making new angular files (controller, models, routes etc.) creation easier you can use appropriate gulp task.
-
-*
+    For making new angular files (controller, models, routes etc.) creation easier you can use appropriate gulp task.
+    
+    *
