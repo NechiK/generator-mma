@@ -23,15 +23,15 @@ npm install -g generator-mma
 mkdir myapp
 cd myapp
 ```
-4. Run the generator 
+3. Run the generator 
 ```
 yo mma 
 ```
-5. Install dependencies (if they were not installed recently.
+4. Install dependencies (if they were not installed recently.
 ```
 npm install
 ```
-6. Start the project and begin coding
+5. Start the project and begin coding
 ```
 gulp serve-dev
 ```
