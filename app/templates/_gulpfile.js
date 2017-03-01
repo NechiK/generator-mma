@@ -82,7 +82,7 @@ gulp.task('generate', function () {
                 name: directive,
                 moduleName: module || 'app.core'
             }))
-            .pipe(gulp.dest(defaultDir + '/core/directives/' + directive));
+            .pipe(gulp.dest(defaultDir + '/directives/' + directive));
     }
     if (module) {
         return gulp.src(templatesDir + 'module.template')
