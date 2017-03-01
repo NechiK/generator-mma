@@ -1,4 +1,4 @@
-Generator of AngularJS (1.x) project based on Hottowel generator.
+Generator of AngularJS (1.x. project based on Hottowel generator.
 
 The key differences:
 - added gulp task for angular files generation
@@ -7,38 +7,38 @@ The key differences:
 
 # Preconditions
 
-1) Install Node.js <br />
-2) Install next NPM modules globally
+1. Install Node.js <br />
+2. Install next NPM modules globally
 ```
 npm install -g bower gulp nodemon 
 ```
 # Quick Start
 
-1) Install generator-mma
+1. Install generator-mma
 ```
 npm install -g generator-mma
 ```
-2) Create a new folder for project and change directory to it
+2. Create a new folder for project and change directory to it
 ``` 
 mkdir myapp
 cd myapp
 ```
-4) Run the generator 
+4. Run the generator 
 ```
 yo mma 
 ```
-5) Install dependencies (if they were not installed recently)
+5. Install dependencies (if they were not installed recently.
 ```
 npm install
 ```
-6) Start the project and begin coding
+6. Start the project and begin coding
 ```
 gulp serve-dev
 ```
 
 # Gulp tasks
 
-1) ``` gulp generate ```
+1. ``` gulp generate ```
 
 For making new angular files (controller, models, routes etc.) creation easier you can use appropriate gulp task.
 
