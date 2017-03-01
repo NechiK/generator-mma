@@ -15,26 +15,30 @@ npm install -g bower gulp nodemon
 # Quick Start
 
 1. Install generator-mma
-```
-npm install -g generator-mma
-```
+    ```
+    npm install -g generator-mma
+    ```
+
 2. Create a new folder for project and change directory to it
-``` 
-mkdir myapp
-cd myapp
-```
+    ``` 
+    mkdir myapp
+    cd myapp
+    ```
+    
 3. Run the generator 
-```
-yo mma 
-```
+    ```
+    yo mma 
+    ```
+
 4. Install dependencies (if they were not installed recently.
-```
-npm install
-```
+    ```
+    npm install
+    ```
+
 5. Start the project and begin coding
-```
-gulp serve-dev
-```
+    ```
+    gulp serve-dev
+    ```
 
 # Gulp tasks
 
