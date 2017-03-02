@@ -1,5 +1,7 @@
 Generator of AngularJS (1.x) project based on [Hottowel](https://github.com/johnpapa/generator-hottowel) generator.
 
+```Version 1.0.0-beta0```
+
 The key differences:
 - added gulp task for angular files generation
 - added API service
@@ -72,19 +74,19 @@ The key differences:
     
 - `gulp vet`
 
-    Performs static code analysis on all javascript files. Runs jshint and jscs.
+    Runs jshint and jscs on all javascript files.
     
 - `gulp test`
 
-    Runs all unit tests using karma runner, mocha, chai and sinon with phantomjs. Depends on vet task, for code analysis.
+    Runs all unit tests (using Karma runner and next frameworks: mocha, chai and sinon).
     
 - `gulp styles`
 
-    Compile scss files to CSS, add vendor prefixes, and copy to the build folder
+    Compile scss files to CSS and copy to the build folder
 
 - `gulp serve-dev`
 
-    Serves the development code and launches it in a browser. The goal of building for development is to do it as fast as possible, to keep development moving efficiently. This task serves all code from the source folders and compiles less to css in a temp folder.
+    Serves the development code and launches it in a browser. The goal of building for development is to do it as fast as possible, to keep development moving efficiently. This task serves all code from the source folders and compiles sass to css in a temp folder.
     
 - `gulp build`
 
