@@ -3,7 +3,7 @@ Generator of AngularJS (1.x) project based on [Hottowel](https://github.com/john
 The key differences:
 - added gulp task for angular files generation
 - added API service
-- replaced LESS on SASS
+- replaced LESS with SASS
 
 # Preconditions
 
@@ -21,7 +21,7 @@ The key differences:
     npm install -g generator-mma
     ```
 
-2. Create a new folder for project and change directory to it
+2. Create a new folder for project and step inside it
     ``` 
     mkdir myapp
     cd myapp
@@ -62,13 +62,13 @@ The key differences:
 
     For making new angular files (controller, models, routes etc.) creation easier you can use appropriate gulp task.
     
-    * ``` gulp generate --controller controller_name```
-    * ``` gulp generate --model model_name```
-    * ``` gulp generate --model route_file_name```
-    * ``` gulp generate --directive directive_name```
-    * ``` gulp generate --module module_name```
+    * ``` gulp generate --controller controller_name``` - will add folder for controller (if it does not exist) and generate controller with name ```ControllerNameController```
+    * ``` gulp generate --model model_name``` - will add file ```model_name.model.js``` to ```models``` folder and generate model with name ```ModelNameModel```
+    * ``` gulp generate --model route_file_name``` - will add file ```route_file_name.route.js``` to ```routes``` folder
+    * ``` gulp generate --directive directive_name``` - will add file ```directive_name.directive.js``` to ```directive``` folder and generate directive with name ```directiveName```
+    * ``` gulp generate --module module_name``` - - will add folder for module (if it does not exist) and generate module with module name ```module_name```
     
-    Also you can use ```--module [module_name]``` then add generated file to specified module. By default it will be added to ```app.core```
+    You can add ```--module [module_name]``` to all generators (except module generator) to attach a file to specified module. By default it will be attached to ```app.core```
     
 - `gulp vet`
 
