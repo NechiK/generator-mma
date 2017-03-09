@@ -10,7 +10,8 @@ The key differences:
 - replaced LESS with SASS
 
 List of tasks:
-- adding makefile
+- writing more detailed documentation
+- replacing project commands (like npm install, gulp generate etc.) with make commands
 - unit tests implementation
 - generator tests implementation
 - issues fixing
@@ -23,7 +24,11 @@ List of tasks:
     ```
     npm install -g bower gulp nodemon 
     ```
-    
+3. Install Yeoman 
+
+    ```
+    npm install -g yo
+    ```
 # Quick Start
 
 1. Install generator-mma

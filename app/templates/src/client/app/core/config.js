@@ -13,7 +13,7 @@
         toastr.options.positionClass = 'toast-bottom-right';
     }
 
-    <% if (requestsArchitect) {%>
+    <% if (requestsArchitect === 'REST') {%>
     requestsConfig.$inject = ['$httpProvider', '$resourceProvider'];
     /* @ngInject */
     function requestsConfig($httpProvider, $resourceProvider) {
@@ -51,7 +51,6 @@
     }
 
     <% } %>
-
     var config = {
         appErrorPrefix: '[<%= appName %> Error] ',
         appTitle: '<%= appName %>',
