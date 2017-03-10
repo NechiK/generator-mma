@@ -2,7 +2,7 @@ Generator of AngularJS (1.x) project based on [Hottowel](https://github.com/john
 
 Now its still on implementation stage. But I am ready to yours suggestions and remarks.
 
-```Version 1.0.0-beta0```
+```Version: 1.0.0-beta0```
 
 The key differences:
 - added gulp task for angular files generation
@@ -30,6 +30,7 @@ List of tasks:
     ```
     npm install -g yo
     ```
+    
 # Quick Start
 
 1. Install generator-mma
