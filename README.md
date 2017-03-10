@@ -10,6 +10,7 @@ The key differences:
 - replaced LESS with SASS
 
 List of tasks:
+- fixing small issue with build task
 - writing more detailed documentation
 - replacing project commands (like npm install, gulp generate etc.) with make commands
 - unit tests implementation
