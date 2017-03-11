@@ -1,6 +1,6 @@
 {
   "name": "generator-mma",
-  "version": "1.0.0-beta0",
+  "version": "1.0.0-beta.0",
   "description": "A Yeoman generator for creating a modular and maintainable AngularJS project",
   "main": "index.js",
   "scripts": {
