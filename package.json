@@ -30,6 +30,10 @@
       "url": "https://github.com/johnpapa"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NechiK/generator-mma"
+  },
   "license": "MIT",
   "dependencies": {
     "gulp-load-plugins": "^1.2.4",
