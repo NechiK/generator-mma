@@ -108,6 +108,7 @@ The key differences:
 - fixing small issue with build task
 - writing more detailed documentation
 - replacing project commands (like npm install, gulp generate etc.) with ```make``` commands
+- add service for SOAP request architecture
 - unit tests implementation
 - generator tests implementation
 - issues fixing

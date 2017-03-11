@@ -42,7 +42,7 @@ var ModularMaintainableAngular = yeoman.Base.extend({
             type: 'list',
             name: 'requestsArchitect',
             message: 'What type of request architecture do you want to use?',
-            choices: ['REST', 'SOAP', 'Skip']
+            choices: ['REST', 'Skip']
         });
 
         return this.prompt(prompts).then(function(answers) {

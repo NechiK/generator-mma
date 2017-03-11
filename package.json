@@ -11,6 +11,10 @@
     "angular",
     "angularjs",
     "generator",
+    "rest",
+    "api",
+    "service",
+    "requests",
     "modular",
     "maintainable"
   ],
