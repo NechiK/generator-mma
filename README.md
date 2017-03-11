@@ -2,8 +2,6 @@ Generator of AngularJS (1.x) project based on [Hottowel](https://github.com/john
 
 For now it's on implementation stage so I am ready for your suggestions and remarks.
 
-```Version: 1.0.0-beta.0```
-
 The key differences:
 - added gulp task for angular files generation
 - added API service
