@@ -1,6 +1,6 @@
 Generator of AngularJS (1.x) project based on [Hottowel](https://github.com/johnpapa/generator-hottowel) generator.
 
-Now it's still on implementation stage. But I am ready to your suggestions and remarks.
+For now it's on implementation stage so I am ready for your suggestions and remarks.
 
 ```Version: 1.0.0-beta.0```
 
@@ -8,14 +8,6 @@ The key differences:
 - added gulp task for angular files generation
 - added API service
 - replaced LESS with SASS
-
-List of tasks:
-- fixing small issue with build task
-- writing more detailed documentation
-- replacing project commands (like npm install, gulp generate etc.) with make commands
-- unit tests implementation
-- generator tests implementation
-- issues fixing
 
 # Preconditions
 
@@ -49,7 +41,7 @@ List of tasks:
     yo mma 
     ```
 
-4. Install dependencies (if they were not installed recently.
+4. Install dependencies
     ```
     npm install
     ```
@@ -77,7 +69,7 @@ List of tasks:
 
 - ``` gulp generate ```
 
-    For making new angular files (controller, models, routes etc.) creation easier you can use appropriate gulp task.
+    Use gulp tasks listed below to generate your controllers, models, routes etc. easily.
     
     * ``` gulp generate --controller controller_name``` - will add folder for controller (if it does not exist) and generate controller with name ```ControllerNameController```
     * ``` gulp generate --model model_name``` - will add file ```model_name.model.js``` to ```models``` folder and generate model with name ```ModelNameModel```
@@ -110,6 +102,15 @@ List of tasks:
 - `gulp serve-build`
 
     Serve the optimized code from the build folder and launch it in a browser.
+    
+## TODOs
+
+- fixing small issue with build task
+- writing more detailed documentation
+- replacing project commands (like npm install, gulp generate etc.) with ```make``` commands
+- unit tests implementation
+- generator tests implementation
+- issues fixing
     
 ## License
 
