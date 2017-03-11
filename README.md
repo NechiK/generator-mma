@@ -67,7 +67,7 @@ The key differences:
 
 # Gulp tasks
 
-- ``` gulp generate ```
+- `gulp generate`
 
     Use gulp tasks listed below to generate your controllers, models, routes etc. easily.
     
