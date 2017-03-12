@@ -63,6 +63,37 @@ The key differences:
                 /main
                 /dashboard
 
+# REST API service
+
+###Methods
+
+```InitApiMethod(url, method)```
+
+Params        | Type         | Details
+---           | ---          | ---
+```url```     | ```string``` | A parameterized URL template. Parameters should be prefixed by ```:``` as in ```/task/:task_id```
+```method```  | ```string``` | Case insensitive HTTP method (e.g. ```GET```, ```POST```, ```PUT```, ```DELETE```)
+
+#####Returns 
+
+Type         | Details  
+---          | ---
+```object``` | An APIService 'class' object with method ```run``` which returns promise when request will be finished.
+
+
+```InitREST(url)```
+
+Params        | Type         | Details
+---           | ---          | ---
+```url```     | ```string``` | A parameterized URL template. Parameters should be prefixed by ```:``` as in ```/task/:task_id```
+
+#####Returns 
+
+Type         | Details  
+---          | ---
+```object``` | An APIService 'class' object with REST set of methods.
+
+
 # Gulp tasks
 
 - `gulp generate`
@@ -110,6 +141,7 @@ The key differences:
 - unit tests implementation
 - generator tests implementation
 - issues fixing
+- move APIService to separate npm package
     
 ## License
 

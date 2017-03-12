@@ -33,7 +33,7 @@
 
             APIMethod.prototype.apiResource = new Resource({api: apiEndpoint});
             APIMethod.prototype.requestPromiseHashByParams = {};
-            APIMethod.prototype.run = returnRequestFunction(APIMethod, method);
+            APIMethod.prototype.run = returnRequestFunction(method);
 
             return new APIMethod();
         }
@@ -44,15 +44,15 @@
 
             RESTApi.prototype.apiResource = new Resource({api: apiEndpoint});
             RESTApi.prototype.requestPromiseHashByParams = {};
-            RESTApi.prototype.get = returnRequestFunction(RESTApi, 'get');
-            RESTApi.prototype.post = returnRequestFunction(RESTApi, 'post');
-            RESTApi.prototype.update = returnRequestFunction(RESTApi, 'update');
-            RESTApi.prototype.delete = returnRequestFunction(RESTApi, 'delete');
+            RESTApi.prototype.get = returnRequestFunction('get');
+            RESTApi.prototype.post = returnRequestFunction('post');
+            RESTApi.prototype.update = returnRequestFunction('update');
+            RESTApi.prototype.delete = returnRequestFunction('delete');
 
             return new RESTApi();
         }
 
-        function returnRequestFunction(classInstance, method) {
+        function returnRequestFunction(method) {
             return function (params) {
                 var stringifiedParams = JSON.stringify(params),
                     hashedParams;
@@ -61,7 +61,7 @@
                 }
 
                 if (this.requestPromiseHashByParams.hasOwnProperty(hashedParams)) {
-                    return classInstance.requestPromiseHashByParams[hashedParams];
+                    return this.requestPromiseHashByParams[hashedParams];
                 } else {
                     this.requestPromiseHashByParams[hashedParams] = this.apiResource[method](params || {});
                     removePromiseAfterRequest(this.requestPromiseHashByParams, hashedParams);
