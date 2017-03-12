@@ -67,7 +67,7 @@ The key differences:
 
 ###Methods
 
-```InitApiMethod(url, method)```
+- ```InitApiMethod(url, method)```
 
 Params        | Type         | Details
 ---           | ---          | ---
@@ -80,8 +80,8 @@ Type         | Details
 ---          | ---
 ```object``` | An APIService 'class' object with method ```run``` which returns promise when request will be finished.
 
-#####
-```InitREST(url)```
+
+- ```InitREST(url)```
 
 Params        | Type         | Details
 ---           | ---          | ---
