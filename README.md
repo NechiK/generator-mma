@@ -80,7 +80,7 @@ Type         | Details
 ---          | ---
 ```object``` | An APIService 'class' object with method ```run``` which returns promise when request will be finished.
 
-
+#####
 ```InitREST(url)```
 
 Params        | Type         | Details
