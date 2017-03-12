@@ -74,11 +74,11 @@ Params        | Type         | Details
 ```url```     | ```string``` | A parameterized URL template. Parameters should be prefixed by ```:``` as in ```/task/:task_id```
 ```method```  | ```string``` | Case insensitive HTTP method (e.g. ```GET```, ```POST```, ```PUT```, ```DELETE```)
 
-#####Returns 
+####Returns 
 
 Type         | Details  
 ---          | ---
-```object``` | An APIService 'class' object with method ```run``` which returns promise when request will be finished.
+```object``` | An APIService 'class' object with method ```run``` that takes only one parameter as ```object``` with request data (URL parameters shouldn't be prefixed by ```:```) and returns promise when request will be finished
 
 
 - ```InitREST(url)```
@@ -87,11 +87,11 @@ Params        | Type         | Details
 ---           | ---          | ---
 ```url```     | ```string``` | A parameterized URL template. Parameters should be prefixed by ```:``` as in ```/task/:task_id```
 
-#####Returns 
+####Returns 
 
 Type         | Details  
 ---          | ---
-```object``` | An APIService 'class' object with REST set of methods.
+```object``` | An APIService 'class' object with set of methods (```get```, ```post```, ```update```, ```delete```)
 
 
 # Gulp tasks
