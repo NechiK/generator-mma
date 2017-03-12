@@ -65,17 +65,22 @@ The key differences:
 
 # REST API service
 
+This service is based on [$resource](https://docs.angularjs.org/api/ngResource/service/$resource).
+
+It stores the request promise during the time of its execution. It is done in order to block sending of same requests (requests with same url) with same parameters at the same time.
+
+For example, resending form with identical data or using same APIs on different parts of your web app (e.g. you need to receive list of groups on the sidebar, however you have page for managing this groups which use the same API for receiving list of them. In this case this service makes request only once and other requests will receive promise at the end of the query execution )
 
 To use ```APIService``` in controller, factory etc. you need to inject it.
 
 ```
-    angular
-        .module('some_module')
-        .controller('SomeController', SomeController)
-        
-    SomeController.$inject = ['APIService'];
+angular
+    .module('some_module')
+    .controller('SomeController', SomeController)
     
-    function SomeController(APIService) {}
+SomeController.$inject = ['APIService'];
+
+function SomeController(APIService) {}
 ```
 
 ###Methods
