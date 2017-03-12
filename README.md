@@ -1,3 +1,5 @@
+[![npm][npm-badge]][npm-badge-url]
+
 Generator of AngularJS (1.x) project based on [Hottowel](https://github.com/johnpapa/generator-hottowel) generator.
 
 For now it's on implementation stage so I am ready for your suggestions and remarks.
@@ -64,6 +66,9 @@ The key differences:
                 /dashboard
 
 # REST API service
+
+This service is a wrapper on [$resource](https://docs.angularjs.org/api/ngResource/service/$resource).
+The main 
 
 ###Methods
 
