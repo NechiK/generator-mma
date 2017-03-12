@@ -65,9 +65,22 @@ The key differences:
 
 # REST API service
 
+
+To use ```APIService``` in controller, factory etc. you need to inject it.
+
+```
+    angular
+        .module('some_module')
+        .controller('SomeController', SomeController)
+        
+    SomeController.$inject = ['APIService'];
+    
+    function SomeController(APIService) {}
+```
+
 ###Methods
 
-- ```InitApiMethod(url, method)```
+- ```APIService.InitApiMethod(url, method)```
 
 Params        | Type         | Details
 ---           | ---          | ---
@@ -81,7 +94,7 @@ Type         | Details
 ```object``` | An APIService 'class' object with method ```run``` that takes only one parameter as ```object``` with request data (URL parameters shouldn't be prefixed by ```:```) and returns promise when request will be finished
 
 
-- ```InitREST(url)```
+- ```APIService.InitREST(url)```
 
 Params        | Type         | Details
 ---           | ---          | ---
