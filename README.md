@@ -65,9 +65,6 @@ The key differences:
 
 # REST API service
 
-This service is a wrapper on [$resource](https://docs.angularjs.org/api/ngResource/service/$resource).
-The main 
-
 ###Methods
 
 - ```InitApiMethod(url, method)```
