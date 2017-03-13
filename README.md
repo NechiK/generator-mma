@@ -3,8 +3,8 @@ Generator of AngularJS (1.x) project based on [Hottowel](https://github.com/john
 For now it's on implementation stage so I am ready for your suggestions and remarks.
 
 The key differences:
-- added gulp task for angular files generation
-- added API service
+- task for angular files generation (controllers, models, directives etc.)
+- REST API service
 - replaced LESS with SASS
 
 # Preconditions
