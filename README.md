@@ -152,7 +152,6 @@ Type         | Details
     
 ## TODOs
 
-- fixing small issue with build task
 - writing more detailed documentation
 - replacing project commands (like npm install, gulp generate etc.) with ```make``` commands
 - add service for SOAP request architecture
