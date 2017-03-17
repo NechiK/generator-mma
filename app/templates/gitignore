@@ -6,3 +6,6 @@ bower_components/
 # other
 .tmp
 angular_templates/
+.idea
+build
+report
