@@ -175,7 +175,7 @@ gulp.task('less-watcher', function() {
 });
 
 /**
- * Create $templateCache from the html ng_templates
+ * Create $templateCache from the html templates
  * @return {Stream}
  */
 gulp.task('templatecache', ['clean-code'], function() {
@@ -256,7 +256,7 @@ gulp.task('build-specs', ['templatecache'], function(done) {
         .pipe(inject(config.testlibraries, 'testlibraries'))
         .pipe(inject(config.specHelpers, 'spechelpers'))
         .pipe(inject(specs, 'specs', ['**/*']))
-        .pipe(inject(templateCache, 'ng_templates'))
+        .pipe(inject(templateCache, 'templates'))
         .pipe(gulp.dest(config.client));
 });
 
@@ -297,7 +297,7 @@ gulp.task('optimize', ['inject', 'test'], function() {
     return gulp
         .src(config.index)
         .pipe($.plumber())
-        .pipe(inject(templateCache, 'ng_templates'))
+        .pipe(inject(templateCache, 'templates'))
         .pipe(assets) // Gather all assets from the html with useref
         // Get the css
         .pipe(cssFilter)

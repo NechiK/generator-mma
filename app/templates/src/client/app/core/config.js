@@ -12,7 +12,6 @@
         toastr.options.timeOut = 4000;
         toastr.options.positionClass = 'toast-bottom-right';
     }
-
     <% if (requestsArchitect === 'REST') {%>
     requestsConfig.$inject = ['$httpProvider', '$resourceProvider'];
     /* @ngInject */
@@ -36,7 +35,7 @@
             },
             response: function (response) {
                 if (isApiRequest(response.config.url)) {
-
+                    console.log(response);
                 }
                 return response;
             },
@@ -49,7 +48,6 @@
             return url.indexOf(config.domainProtocol + config.domainEndpoint + config.portEndpoint) === 0;
         }
     }
-
     <% } %>
     var config = {
         appErrorPrefix: '[<%= appName %> Error] ',

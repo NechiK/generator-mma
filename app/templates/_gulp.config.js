@@ -77,7 +77,7 @@ module.exports = function() {
          * template cache
          */
         templateCache: {
-            file: 'ng_templates.js',
+            file: 'templates.js',
             options: {
                 module: 'app.core',
                 root: 'app/',
@@ -108,7 +108,7 @@ module.exports = function() {
          *  3 js
          *  4 spechelpers
          *  5 specs
-         *  6 ng_templates
+         *  6 templates
          */
         testlibraries: [
             nodeModules + '/mocha/mocha.js',
