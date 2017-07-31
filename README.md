@@ -1,3 +1,5 @@
+# This generator was deprecated. Please, use a new one [angularjs-skeleton](https://github.com/NechiK/generator-angularjs-skeleton)
+
 Generator of AngularJS (1.x) project based on [Hottowel](https://github.com/johnpapa/generator-hottowel) generator.
 
 For now it's on implementation stage so I am ready for your suggestions and remarks.
